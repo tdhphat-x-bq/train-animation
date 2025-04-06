@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phat</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .item{
+            width: 30px; height: 30px;
+            border: 3px solid aqua;
+            box-shadow: 0 0 3rem 5px aqua;
+        }
+        .eye{
+            width: 5px; height: 5px;
+            background-color: white;
+            border-radius: 100%;
+        }
+        .head{
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            /* background-color: red; */
+        }
+        .nose{
+            width: 1px; height: 5px;
+            background-color: white;
+        }
+        .lip{
+            width: 60%; height: 15%;
+            border-radius: 200%;
+            border-bottom: 2px solid white;
+            margin-top: 0px;
+        }
+        .face{
+            width: 20px; height: 20px;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px 5px;
+            /* transform: translate(100px, 100px); */
+            animation: 5s Aface infinite ;
+            /* transform-origin: center; */
+            /* transform: rotate(0deg); */
+        }
+        .line{
+            width: 80%; height: 1px;
+            background-color: white;
+            animation: Aline 5s infinite;
+            transform-origin: top right;
+        }
+        .block{
+            animation: 5s Ablock infinite;
+        }
+        @keyframes Ablock {
+            0%{
+                transform: translate(218px, 562px);
+                border-radius: 0%;
+            }
+            10%{
+                transform: translate(248px, 562px) rotate(180deg);
+                border-radius: 0%;
+            }
+            30%{
+                transform: translate(278px, 562px) rotate(360deg);
+                border-radius: 0%;
+            }
+            50%{
+                transform: translate(308px, 562px) rotate(540deg);
+                border-radius: 0%;
+            }
+            60%{
+                transform: translate(308px, 562px) rotate(540deg);
+                border-radius: 25%;
+            }
+            65%{
+                transform: translate(308px, 562px) rotate(540deg);
+                border-radius: 50%;            }
+            70%{
+                transform: translate(308px, 562px) rotate(540deg);
+                border-radius: 75%;            }
+            75%{
+                transform: translate(308px, 562px) rotate(540deg);
+                border-radius: 100%;            }
+            80%{
+                transform: translate(308px, 562px) rotate(540deg);
+                border-radius: 100%;            
+            }
+            90%{
+                transform: translate(308px, 512px);
+                border-radius: 100%; 
+            }
+            /* 95%{
+                transform: translate(308px, 512px);
+                border-radius: 100%; 
+                transform: translate(3000px, 512px) rotate(2000deg);
+            } */
+            100%{
+                transform: translate(308px, 512px);
+                border-radius: 100%; 
+                transform: translate(3000px, 512px) rotate(2000deg);
+            }
+        }
+        @keyframes Aface {
+            0%{
+                transform: translate(180px, 596px);
+            }
+            10%{
+                transform: translate(210px, 596px) rotate(360deg);
+            }
+            30%{
+                transform: translate(240px, 596px) rotate(720deg);
+            }
+            50%{
+                transform: translate(270px, 596px) rotate(1080deg);
+            }
+
+            60%{
+                transform: translate(270px, 590px) rotate(1080deg);
+            }
+            65%{
+                transform: translate(270px, 596px) rotate(1080deg);
+            }
+            70%{
+                transform: translate(270px, 590px) rotate(1080deg);
+            }
+            75%{
+                transform: translate(270px, 596px) rotate(1080deg);
+            }
+
+            80%{
+                transform: translate(140px, 596px) rotate(1080deg);
+            }
+            100%{
+                transform: translate(270px, 596px) rotate(1080deg);
+            }
+        }
+        @keyframes Aline {
+            0%{
+                transform: translate(15%, 600px) rotate(0deg);
+            }
+            10%{
+                transform: translate(15%, 600px) rotate(0deg);
+            }
+            30%{
+                transform: translate(15%, 600px) rotate(0deg);
+            }
+            50%{
+                transform: translate(15%, 600px) rotate(0deg);
+            }
+            60%{
+                transform: translate(15%, 600px) rotate(0deg);            }
+            65%{
+                transform: translate(15%, 600px) rotate(0deg);            }
+            70%{
+                transform: translate(15%, 600px) rotate(0deg);            }
+            75%{
+                transform: translate(15%, 600px) rotate(0deg);            }
+            /* 95%{
+                transform: translate(15%, 600px)  rotate(2.5deg);
+            } */
+            100%{
+                transform: translate(15%, 600px)  rotate(2.5deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100vw; height: 100vh; background-color: black;">
+        <div class="item face">
+            <div class="head">
+                <div class="eye eye1"></div>
+                <div class="eye eye2"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="lip"></div>
+        </div>
+        <div class="line"></div>
+        <div class="item block"></div>
+    </div>
+</body>
+</html>
